@@ -120,6 +120,7 @@ header .conteiner {
   margin-bottom: 0;
   display: flex;
   gap: 50px;
+
 }
 
 .auth-nav .link {
@@ -128,11 +129,32 @@ header .conteiner {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
+}
+
+.envelope {
+  fill: currentColor;
+}
+
+.envelope:hover,
+.envelope:focus {
+  fill: currentColor;
+}
+
+.smartphone {
+  fill: currentColor;
+}
+
+.smartphone:hover,
+.smartphone:focus {
+  fill: currentColor;
 }
 
 /*HERO*/
@@ -213,6 +235,17 @@ header .conteiner {
   margin: 0;
 }
 
+.feature-icon {
+  background: #F5F4FA;
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
 /*WORK*/
 
 .work {
@@ -275,6 +308,38 @@ header .conteiner {
   line-height: calc(19 / 16);
   text-align: center;
   color: var(--primery-text-color);
+  margin-bottom: 16px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.socials-link {
+  display: flex;
+  background-color: transparent;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.socials-link:hover, .socials-link:focus {
+  background-color: var(--accent-color);
+}
+
+.socials-icon {
+  fill: #AFB1B8;
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: #ffffff;
 }
 
 /*FOOTER*/
@@ -377,10 +442,6 @@ header .conteiner {
   background: #ffffff;
   width: 370px;
   height: 404px;
-}
-
-.portfolio-link img {
-  /* margin-bottom: 20px; */
 }
 
 .description {
