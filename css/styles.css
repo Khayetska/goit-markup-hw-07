@@ -79,7 +79,6 @@ p {
 
 /*site nav*/
 
-
 header .conteiner {
   display: flex;
   justify-content: space-between;
@@ -120,7 +119,6 @@ header .conteiner {
   margin-bottom: 0;
   display: flex;
   gap: 50px;
-
 }
 
 .auth-nav .link {
@@ -161,6 +159,11 @@ header .conteiner {
 
 .hero {
   background-color: #2f303a;
+  background-image: url(../images/overlay.png),
+    url(../images/background-image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -236,7 +239,7 @@ header .conteiner {
 }
 
 .feature-icon {
-  background: #F5F4FA;
+  background: #f5f4fa;
   border-radius: 4px;
   width: 270px;
   height: 120px;
@@ -329,17 +332,61 @@ header .conteiner {
   border-radius: 50%;
 }
 
-.socials-link:hover, .socials-link:focus {
+.socials-link:hover,
+.socials-link:focus {
   background-color: var(--accent-color);
 }
 
 .socials-icon {
-  fill: #AFB1B8;
+  fill: #afb1b8;
 }
 
 .socials-link:hover .socials-icon,
 .socials-link:focus .socials-icon {
   fill: #ffffff;
+}
+
+/* CLIENTS */
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.clients-item {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  border-color: var(--accent-color);
+}
+
+.clients-icons {
+  fill: #afb1b8;
+}
+
+.clients-link:hover .clients-icons,
+.clients-link:focus .clients-icons {
+  fill: var(--accent-color);
 }
 
 /*FOOTER*/
@@ -381,6 +428,35 @@ header .conteiner {
 .margin {
   margin-top: 9px;
   margin-bottom: 9px;
+}
+
+.title-footer {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer .socials-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer .socials-link:hover,
+.footer .socials-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer .socials-icon {
+  fill: #ffffff;
+}
+
+.footer-conteiner {
+  display: flex;
+  align-items: baseline;
+  gap: 70px;
 }
 
 /*---------------PORTFOLIO-----------------*/
@@ -442,6 +518,11 @@ header .conteiner {
   background: #ffffff;
   width: 370px;
   height: 404px;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .description {
