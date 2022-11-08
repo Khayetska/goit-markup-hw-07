@@ -270,6 +270,30 @@ header .conteiner {
   justify-content: space-between;
 }
 
+.gallery-item {
+  position: relative;
+  /* height: 294px; */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.overlay-text {
+  font-weight: 700px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
 /*TEAM*/
 
 .team {
