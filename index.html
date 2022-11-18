@@ -527,7 +527,7 @@
               </ul>
             </address>
           </div>
-          <div>
+          <div class="footer-socials-links">
             <h2 class="title-footer">приєднуйтесь</h2>
             <ul class="socials list">
               <li class="socials-item">
@@ -587,16 +587,17 @@
           
           <div class="footer-form">
             <h2 class="title-footer">Підпишіться на розсилку</h2>
-            <label>
-              <span>E-mail</span>
-              <input type="text" name="email" placeholder="name@mail.com">
-              <button type="submit" class="btn-subscription"> 
+            <form action="" name="subscription-form" class="subscription-form">
+              <label class="subscription-label" for="input">E-mail</label>
+              <input class="footer-input" type="email" name="mail" id="input" placeholder="name@mail.com" required>
+              <button type="submit" class="btn-subscription">
                 Підписатися
                 <svg class="icon-send" width="24" height="24">
                   <use href="./images/icons.svg#send"></use>
                 </svg>
               </button>
-            </label>
+            </form>
+
           </div>
         </div>
       </div>
