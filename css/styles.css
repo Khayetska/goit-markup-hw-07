@@ -342,13 +342,13 @@ header .conteiner {
   padding-right: 42px;
   outline: transparent;
   outline-offset: -1px;
-  transition-property: outline-color;
+  transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
-  outline: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .modal-icon {
