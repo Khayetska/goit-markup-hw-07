@@ -289,12 +289,15 @@ header .conteiner {
   align-items: center;
 }
 
-.close-btn:hover, .close-btn:focus {
-  fill: #2196F3;;
-}
-
 .icon-x {
   fill: currentColor;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-x:hover, .icon-x:focus {
+  fill: var(--accent-color);
 }
 
 .is-hidden {
@@ -389,8 +392,6 @@ header .conteiner {
   margin: 0 auto;
   padding: 0;
 }
-
-
 
 /*FEATURES*/
 
@@ -696,9 +697,10 @@ header .conteiner {
 .subscription-form {
   display: flex;
   gap: 12px;
+  position: relative;
 }
 
-.footer-input {
+.subscription-input {
   position: relative;
   outline: none;
   background-color: transparent;
@@ -716,6 +718,25 @@ header .conteiner {
   box-sizing: border-box;
 }
 
+.subscription-input::placeholder {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscription-input:focus::placeholder {
+  opacity: 1;
+}
+
+.subscription-input:not(:placeholder-shown):required:valid {
+  border-color: green;
+}
+
+.subscription-input:not(:placeholder-shown):required:invalid {
+  border-color: red;
+}
+
 .subscription-label {
   font-weight: 400;
   font-size: 16px;
@@ -723,15 +744,18 @@ header .conteiner {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   font-family: "Roboto", sans-serif;
-  position: absolute; 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px; 
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-input:not(:placeholder-shown):required:valid {
-  border-color: green;
-}
-
-.footer-input:not(:placeholder-shown):required:invalid {
-  border-color: red;
+.subscription-input:focus + .subscription-label,
+.subscription-input:not(:placeholder-shown) +.subscription-label {
+  transform: translate(-150%, -50%) scale(0.9);
 }
 
 .btn-subscription {
