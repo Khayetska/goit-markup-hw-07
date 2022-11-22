@@ -74,31 +74,63 @@
             </button>
             <p class="modal-text">Залиште свої дані, ми вам передзвонимо</p>
             <form name="modal-form" class="modal-form">
-                <label for="user-name" class="modal-label">Ім'я</label>
-                <div class="input-field">
-                  <input type="text" id="user-name" name="user-name" class="modal-input" required>
-                  <svg class="modal-icon" width="18" height="18">
-                    <use href="./images/icons.svg#person"></use>
-                  </svg>
-                </div>
-                <label for="user-phone" class="modal-label">Телефон</label>
-                <div class="input-field">
-                  <input type="tel" id="user-phone" name="user-phone" class="modal-input" required>
-                  <svg class="modal-icon" width="18" height="18">
-                    <use href="./images/icons.svg#phone"></use>
-                  </svg>
-                </div>
-                <label for="user-mail" class="modal-label">Пошта</label>
-                <div class="input-field">
-                  <input type="mail" id="user-mail" name="user-mail" class="modal-input" required>
-                  <svg class="modal-icon" width="18" height="18">
-                    <use href="./images/icons.svg#email"></use>
-                  </svg>
-                </div>
+              <label for="user-name" class="modal-label">Ім'я</label>
+              <div class="input-field">
+                <input
+                  type="text"
+                  id="user-name"
+                  name="user-name"
+                  class="modal-input"
+                  required
+                />
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/icons.svg#person"></use>
+                </svg>
+              </div>
+              <label for="user-phone" class="modal-label">Телефон</label>
+              <div class="input-field">
+                <input
+                  type="tel"
+                  id="user-phone"
+                  name="user-phone"
+                  class="modal-input"
+                  required
+                />
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/icons.svg#phone"></use>
+                </svg>
+              </div>
+              <label for="user-mail" class="modal-label">Пошта</label>
+              <div class="input-field">
+                <input
+                  type="email"
+                  id="user-mail"
+                  name="user-mail"
+                  class="modal-input"
+                  required
+                />
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/icons.svg#email"></use>
+                </svg>
+              </div>
               <label for="user-comment" class="modal-label">Коментар</label>
-              <textarea name="comment" id="user-comment" class="modal-textarea" placeholder="Введіть текст" rows="6"></textarea>
+              <textarea
+                name="comment"
+                id="user-comment"
+                class="modal-textarea"
+                placeholder="Введіть текст"
+                rows="6"
+              ></textarea>
               <div class="modal-ugry">
-                <p class="ugry-text">Погоджуюся з розсилкою та приймаю <span><a href="" class="ugry-link">Умови договору</a></span></p>
+                <input
+                  class="modal-ugry-checkbox"
+                  type="checkbox"
+                  id="modal-ugry-checkbox"
+                />
+                <label class="modal-ugry-description" for="modal-ugry-checkbox">
+                  Погоджуюся з розсилкою та приймаю
+                  <a class="modal-ugry-link" href="">Умови договору</a>
+                </label>
               </div>
               <button type="submit" class="modal-btn">Відправити</button>
             </form>
@@ -618,9 +650,18 @@
           <!-- form -->
           <div class="footer-form">
             <h2 class="title-footer">Підпишіться на розсилку</h2>
-            <form action="" name="-form" class="subscription-form">
-              <input class="subscription-input" type="email" name="mail" id="input" placeholder="name@mail.com" required>
-              <label class="subscription-label" for="input">E-mail</label>
+            <form name="-form" class="subscription-form">
+              <input
+                class="subscription-input"
+                type="email"
+                name="mail"
+                id="subscription-input"
+                placeholder="name@mail.com"
+                required
+              />
+              <label class="subscription-label" for="subscription-input"
+                >E-mail</label
+              >
               <button type="submit" class="btn-subscription">
                 Підписатися
                 <svg class="icon-send" width="24" height="24">

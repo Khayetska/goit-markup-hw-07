@@ -272,7 +272,6 @@ header .conteiner {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* transition: opaciti; */
-
 }
 
 .close-btn {
@@ -296,7 +295,8 @@ header .conteiner {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-x:hover, .icon-x:focus {
+.icon-x:hover,
+.icon-x:focus {
   fill: var(--accent-color);
 }
 
@@ -340,6 +340,15 @@ header .conteiner {
   border-radius: 4px;
   padding-left: 42px;
   padding-right: 42px;
+  outline: transparent;
+  outline-offset: -1px;
+  transition-property: outline-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+  outline: 1px solid var(--accent-color);
 }
 
 .modal-icon {
@@ -347,6 +356,14 @@ header .conteiner {
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
+  fill: currentColor;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--accent-color);
 }
 
 .modal-textarea {
@@ -355,26 +372,64 @@ header .conteiner {
   width: 100%;
   height: 120px;
   margin-bottom: 20px;
+  outline: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.modal-textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-ugry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
   margin-bottom: 30px;
 }
 
-.ugry-text {
+.modal-ugry-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  outline: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='10' fill='none'%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-width='.2' d='m1.957 4.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z'/%3E%3C/svg%3E");
+  transition: 250ms;
+}
+
+.modal-ugry-checkbox:checked {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-size: 11px 8px;
+}
+
+.modal-ugry-description {
   font-size: 14px;
   line-height: calc(24 / 14);
   color: #757575;
+  user-select: none;
 }
 
-.ugry-link {
+.modal-ugry-link {
   color: var(--accent-color);
+  text-underline-offset: 2px;
 }
 
 .modal-btn {
@@ -383,14 +438,22 @@ header .conteiner {
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
-  border-radius: 4px; 
+  border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0 auto;
   padding: 0;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: #188ce8;
 }
 
 /*FEATURES*/
@@ -747,14 +810,14 @@ header .conteiner {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 16px; 
+  left: 16px;
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscription-input:focus + .subscription-label,
-.subscription-input:not(:placeholder-shown) +.subscription-label {
+.subscription-input:not(:placeholder-shown) + .subscription-label {
   transform: translate(-150%, -50%) scale(0.9);
 }
 
@@ -765,7 +828,7 @@ header .conteiner {
   padding: 10px 28px;
   gap: 10px;
 
-  color: #ffffff; 
+  color: #ffffff;
   font-family: "Roboto", sans-serif;
   background-color: var(--accent-color);
   border: none;
@@ -827,7 +890,7 @@ header .conteiner {
 .filtr-button.current:hover,
 .filtr-button.current:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projects {
