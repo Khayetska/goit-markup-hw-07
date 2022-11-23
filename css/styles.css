@@ -57,11 +57,16 @@ p {
 
 /*HEADER*/
 
-.header-studio,
-.header-portfolio {
+.header {
   border-bottom: 1px solid #ececec;
   padding-top: 24px;
   padding-bottom: 25px;
+}
+
+.header .conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -73,31 +78,25 @@ p {
   margin-right: 93px;
 }
 
-.accent-header {
+.logo__accent {
   color: #000000;
 }
 
 /*site nav*/
-
-header .conteiner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .nav {
   display: flex;
   align-items: center;
 }
 
-.site-nav {
+.nav__list {
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
   gap: 50px;
 }
 
-.site-nav .link {
+.nav__link {
   color: #000000;
   font-weight: 500;
   font-size: 14px;
@@ -109,21 +108,19 @@ header .conteiner {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.nav__link.current {
   color: var(--accent-color);
-}
-
-.nav-link.current {
   position: relative;
   padding-bottom: 32px;
 }
 
-.nav-link.current::after {
+
+.nav__link.current::after {
   content: "";
   display: block;
   width: 100%;
@@ -143,7 +140,7 @@ header .conteiner {
   gap: 50px;
 }
 
-.auth-nav .link {
+.auth-nav__link {
   color: var(--primery-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -157,8 +154,8 @@ header .conteiner {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.auth-nav .link:hover,
-.auth-nav .link:focus {
+.auth-nav__link:hover,
+.auth-nav__link:focus {
   color: var(--accent-color);
 }
 
@@ -199,7 +196,7 @@ header .conteiner {
   padding-bottom: 200px;
 }
 
-.hero-text {
+.hero__description {
   color: #ffffff;
   font-weight: 900;
   font-size: 44px;
@@ -212,7 +209,7 @@ header .conteiner {
   text-transform: uppercase;
 }
 
-.hero-button {
+.hero__button {
   background-color: var(--accent-color);
   color: #ffffff;
   font-weight: 700;
@@ -234,8 +231,8 @@ header .conteiner {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.hero__button:hover,
+.hero__button:focus {
   background-color: #188ce8;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -292,7 +289,7 @@ header .conteiner {
   align-items: center;
 }
 
-.icon-x {
+.close-btn__icon-x {
   fill: currentColor;
   transition-property: fill;
   transition-duration: 250ms;
