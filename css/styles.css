@@ -250,18 +250,23 @@ header .conteiner {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   z-index: 10;
+  opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.2);
+  transform: translate(-50%, -50%) scale(0.2);  
 }
 
 .modal {
   position: relative;
   top: 50%;
   left: 50%;
-  /* visibility: hidden; */
   width: 528px;
   min-height: 581px;
   padding: 40px;
@@ -271,7 +276,6 @@ header .conteiner {
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* transition: opaciti; */
 }
 
 .close-btn {
@@ -295,15 +299,9 @@ header .conteiner {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-x:hover,
-.icon-x:focus {
+.close-btn:hover .close-btn__icon-x,
+.close-btn:focus .close-btn__icon-x {
   fill: var(--accent-color);
-}
-
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .modal-form {
@@ -311,7 +309,7 @@ header .conteiner {
   flex-direction: column;
 }
 
-.modal-text {
+.modal__description {
   font-weight: 700;
   font-size: 20px;
   line-height: calc(23 / 20);
@@ -829,7 +827,10 @@ header .conteiner {
   gap: 10px;
 
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
   background-color: var(--accent-color);
   border: none;
   border-radius: 4px;
