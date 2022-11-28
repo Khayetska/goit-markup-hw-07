@@ -764,7 +764,7 @@ p {
   position: relative;
 }
 
-.subscription-input {
+.subscription-form__input {
   position: relative;
   outline: none;
   background-color: transparent;
@@ -782,26 +782,26 @@ p {
   box-sizing: border-box;
 }
 
-.subscription-input::placeholder {
+.subscription-form__input::placeholder {
   opacity: 0;
   transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscription-input:focus::placeholder {
+.subscription-form__input:focus::placeholder {
   opacity: 1;
 }
 
-.subscription-input:not(:placeholder-shown):required:valid {
+.subscription-form__input:not(:placeholder-shown):required:valid {
   border-color: green;
 }
 
-.subscription-input:not(:placeholder-shown):required:invalid {
+.subscription-form__input:not(:placeholder-shown):required:invalid {
   border-color: red;
 }
 
-.subscription-label {
+.subscription-form__label {
   font-weight: 400;
   font-size: 16px;
   line-height: calc(20 / 16);
@@ -817,12 +817,12 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscription-input:focus + .subscription-label,
-.subscription-input:not(:placeholder-shown) + .subscription-label {
+.subscription-form__input:focus + .subscription-form__label,
+.subscription-form__input:not(:placeholder-shown) + .subscription-label {
   transform: translate(-150%, -50%) scale(0.9);
 }
 
-.btn-subscription {
+.subscription-form__btn {
   display: flex;
   align-items: center;
   text-align: center;
@@ -840,7 +840,7 @@ p {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.icon-send {
+.button__icon-send {
   fill: currentColor;
 }
 
