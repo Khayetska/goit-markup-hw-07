@@ -1,0 +1,58 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #ffffff;
+    letter-spacing: 0.03em;
+    font-weight: 400px;
+}
+
+button {
+    --font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.conteiner {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title--visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}

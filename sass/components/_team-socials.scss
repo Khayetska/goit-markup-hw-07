@@ -1,0 +1,30 @@
+.socials {
+    @include centeredFlex ();
+    gap: 10px;
+}
+
+.socials__link {
+    @include centeredFlex ();
+    background-color: transparent;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    @include animation (background-color);
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+
+.socials__icon {
+    fill: #afb1b8;
+    @include animation (fill);
+
+    .socials__link:hover &,
+    .socials__link:focus & {
+        fill: #ffffff;
+    }
+}
+
