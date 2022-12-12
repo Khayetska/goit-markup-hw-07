@@ -272,7 +272,6 @@ p {
 .projects__item {
   background: #ffffff;
   width: 370px;
-  height: 404px;
   position: relative;
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
@@ -342,11 +341,11 @@ p {
 }
 
 .description {
-  border: 1px solid #eeeeee;
-  border-top: 0;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .description__title {
